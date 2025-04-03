@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title th:text="${pageTitle} + ' - Jenkins Example'">Home - Jenkins Example</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Spring MVC Jenkins Example</h1>
+			<nav>
+				<ul>
+					<li><a th:href="@{/}" class="active">Home</a></li>
+					<li><a th:href="@{/about}">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="info-panel">
+				<h2>Server Information</h2>
+				<div class="info-item">
+					<span class="label">Server Time:</span>
+					<span class="value" th:text="${serverInfo.serverTime}">2025-04-02 12:00:00</span>
+				</div>
+				<div class="info-item">
+					<span class="label">Build Version:</span>
+					<span class="value" th:text="${serverInfo.buildVersion}">1.0.0</span>
+				</div>
+				<div class="info-item">
+					<span class="label">Environment:</span>
+					<span class="value" th:text="${serverInfo.environment}">development</span>
+				</div>
+			</section>
+
+			<section class="content">
+				<h2>Welcome to the Jenkins Example Application</h2>
+				<p>This is a simple Spring MVC application with Thymeleaf templating designed to be used in Jenkins
+					CI/CD pipelines.</p>
+				<p>Use this project to demonstrate automated building, testing, and deployment with Jenkins.</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2025 Jenkins Example Application</p>
+		</footer>
+	</div>
+
+	<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

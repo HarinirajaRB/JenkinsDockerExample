@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title th:text="${pageTitle} + ' - Jenkins Example'">About - Jenkins Example</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Spring MVC Jenkins Example</h1>
+			<nav>
+				<ul>
+					<li><a th:href="@{/}">Home</a></li>
+					<li><a th:href="@{/about}" class="active">About</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="content">
+				<h2>About This Project</h2>
+				<p>This sample application demonstrates:</p>
+				<ul>
+					<li>Spring Boot with Spring MVC</li>
+					<li>Thymeleaf templating</li>
+					<li>Jenkins CI/CD integration</li>
+					<li>Automated testing and deployment</li>
+				</ul>
+				<p>The application is designed to be simple and database-free for easy Jenkins pipeline demonstration.
+				</p>
+			</section>
+		</main>
+
+		<footer>
+			<p>&copy; 2025 Jenkins Example Application</p>
+		</footer>
+	</div>
+
+	<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>
